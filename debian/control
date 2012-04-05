@@ -10,19 +10,19 @@ Vcs-Git: git://github.com/etsy/logster.git
 
 Package: logster
 Architecture: all
-Depends: ${misc:Depends}, python, logtail
+Depends: ${misc:Depends}, ${python:Depends}, logtail
 Description: Parse log files, generate metrics for Graphite and Ganglia
  Logster is a utility for reading log files and generating metrics in Graphite
  or Ganglia. It is ideal for visualizing trends of events that are occurring in
  your application/system/error logs. For example, you might use logster to graph
  the number of occurrences of HTTP response code that appears in your web server
  logs.
- 
+ .
  Logster maintains a cursor, via logtail, on each log file that it reads so that
  each successive execution only inspects new log entries. In other words, a 1
  minute crontab entry for logster would allow you to generate near real-time
  trends in Graphite or Ganglia for anything you want to measure from your logs. 
- 
+ .
  This tool is made up of a framework script, logster, and parsing scripts that
  are written to accommodate your specific log format. Two sample parsers are
  included in this distribution. The parser scripts essentially read a log file

@@ -1,0 +1,25 @@
+This work was packaged for Debian by:
+
+    buildmaster <builds@jimdo.com> on Thu, 05 Apr 2012 13:39:12 +0200
+
+It was downloaded from:
+
+    https://github.com/etsy/logster
+
+Upstream Author(s):
+
+    Mike Brittain <mike@mikebrittain.com>
+
+Copyright:
+
+    Copyright (C) ???? Mike Brittain
+
+License:
+
+    unknown
+
+The Debian packaging is:
+
+    Copyright (C) 2012 buildmaster <builds@jimdo.com>
+
+and is licensed under the GPL version 3.

@@ -1,0 +1,5 @@
+logster (20120405-2) unstable; urgency=low
+
+  * initial debianization
+
+ -- buildmaster <builds@jimdo.com>  Thu, 05 Apr 2012 14:14:35 +0200

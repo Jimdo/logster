@@ -50,6 +50,8 @@ import logging.handlers
 import fcntl
 import socket 
 import traceback
+import subprocess
+from subprocess import Popen
 
 from time import time
 from math import floor
@@ -271,15 +273,15 @@ def main():
 
         except OSError, e:
             logger.info('Writing new state file and exiting. (Was either first run, or state file went missing.)')
-            input = os.popen(shell_tail)
-            retval = input.close()
-            if (retval != 256):
+            process = Popen(shell_tail + ' >/dev/null', shell=True)
+            retval = process.wait()
+            if retval:
                 logger.warning('%s returned bad exit code %s' % (shell_tail, retval))
             end_locking(lockfile, logtail_lock_file)
             sys.exit(0)
 
         # Open a pipe to read input from logtail.
-        input = os.popen(shell_tail)
+        input = Popen(shell_tail, shell=True, stdout=subprocess.PIPE).stdout
 
     except SystemExit, e:
         raise

@@ -1,4 +1,4 @@
-#!/usr/bin/python -tt
+#!/usr/bin/env python -tt
 # -*- coding: utf-8 -*-
 
 ###
@@ -56,7 +56,6 @@ from time import time
 from math import floor
 
 # Local dependencies
-sys.path.append("/usr/share/logster")
 from logster_helper import LogsterParsingException, LockingError
 
 # Globals
@@ -250,7 +249,7 @@ def main():
 
     # Import and instantiate the class from the module passed in.  Files and Class names must be the same.
     try:
-        module = __import__(CLASS_NAME)
+        module = __import__('parsers.' + CLASS_NAME, fromlist=[CLASS_NAME])
         parser = getattr(module, CLASS_NAME)(option_string=options.parser_options)
     except Exception, e:
         print "Failed to instantiate parser (line %s): %s" % (lineno(), e)

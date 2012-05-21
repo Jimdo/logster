@@ -1,3 +1,9 @@
+logster (20120405-4) unstable; urgency=low
+
+  * fix sys.path
+
+ -- buildmaster <builds@jimdo.com>  Mon, 21 May 2012 12:04:37 +0200
+
 logster (20120405-3) unstable; urgency=low
 
   * fix paths

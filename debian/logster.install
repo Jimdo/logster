@@ -1,4 +1,4 @@
 logster /usr/sbin
 logster_helper.py /usr/share/logster
-parsers/* /usr/share/logster
+parsers/* /usr/share/logster/parsers
 

@@ -1,3 +1,9 @@
+logster (20120405-5) unstable; urgency=low
+
+  * Rebuild package.
+
+ -- Mathias Lafeldt <mathias.lafeldt@gmail.com>  Mon, 25 Aug 2014 14:34:43 +0000
+
 logster (20120405-4) unstable; urgency=low
 
   * fix sys.path
